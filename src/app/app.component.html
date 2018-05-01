@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="header"><h1>{{title}}</h1></div>
+  <div class="search-box">
+    <input-data (onSearchResults)="updateInputParams($event)" (loadingComponent)="swapLoading($event)"></input-data>
+  </div>
+ 
+  <div class="flight-card" [ngClass]="{'loading':loading}">
+    <filter-details [searchResults]="searchResults" (fly)="updateFlying($event)"></filter-details>
+  </div>
+</div>
+<div class="toony-flight" [ngClass]="{'fly':fly}" (animationend)="fly=false"><span>&#9992;</span></div>
