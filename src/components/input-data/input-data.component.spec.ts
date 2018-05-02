@@ -4,7 +4,7 @@ import { InputDataComponent } from './input-data.component';
 import { HttpModule } from '@angular/http';
 
 import { FormsModule } from '@angular/forms';
-import { SearchService } from '../../services/search.service';
+import { flightSearchService } from '../../services/search.service';
 
 describe('InputDataComponent', () => {
   let component: InputDataComponent;
@@ -14,7 +14,7 @@ describe('InputDataComponent', () => {
     TestBed.configureTestingModule({
       declarations: [InputDataComponent],
       imports: [FormsModule, HttpModule],
-      providers: [SearchService]
+      providers: [flightSearchService]
     })
       .compileComponents();
   }));
